@@ -33,9 +33,8 @@ const Registration = () => {
       actualData.name &&
       actualData.email &&
       actualData.password &&
-      actualData.tc !== null
-    ) {
-      if (actualData.password === actualData.password_confirmation) {
+      actualData.tc !== null) 
+     {if (actualData.password === actualData.password_confirmation) {
         console.log(actualData);
         document.getElementById("registration-form").reset();
         setError({
@@ -43,7 +42,7 @@ const Registration = () => {
           message: "Registration Successful",
           type: "success",
         });
-        navigate("/");
+        navigate("/dashboard");
       } else {
         setError({
           status: true,

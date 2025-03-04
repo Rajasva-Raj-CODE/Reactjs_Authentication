@@ -27,7 +27,7 @@ const UserLogin = () => {
         message: "Login Success",
         type: "success",
       });
-      navigate("/");
+      navigate("/dashboard");
     } else {
       setError({
         status: true,
@@ -73,7 +73,7 @@ const UserLogin = () => {
             Login
           </Button>
         </Box>
-        <NavLink to="/">Forgot Password ? </NavLink>
+        <NavLink to="/sendpasswordresetemail">Forgot Password ? </NavLink>
         {error.status ? (
           <Alert severity={error.type} sx={{ mt: 3, mb: 2 }}>
             {error.message}
